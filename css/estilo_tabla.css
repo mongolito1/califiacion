@@ -1,0 +1,106 @@
+	body{
+	margin:0;
+	padding: 0;
+	font-family: sans-serif;
+	background: linear-gradient(90deg, #082871, #10E9FF);
+   
+}
+	table{
+		width: 800px;
+		font-family: sans-serif;
+		font-weight: 100;
+		border-collapse: collapse;
+		overflow: hidden;
+		box-shadow: 0 0 20px #0000001a;
+	}
+
+
+	th,
+	td{
+		background-color: #ffffff33;
+		padding: 15px;
+		color: #fff;
+	}
+	th{
+		text-align: left;
+
+	}
+
+	thead th{
+		background-color: #55608f;
+	}
+	tbody tr:hover {
+		background-color: #ffffff4d;
+	}
+	tbody td{
+		position: relative;
+	}
+	tbody td:hover:before {
+		content:"";
+		position: absolute;
+		background-color: #ffffff33;
+		left: 0;
+		right: 0;
+		top: -9999px;
+		bottom: -9999px;
+		z-index: -1;
+	}
+	@import url('https://fonts.googleapis.com/css2? family-Nunito+Sans:wght@200&display=swap');
+
+:root {
+
+font-style: 'Nunito Sans', sans-serif;
+
+}
+ul {
+
+
+margin: 5%;
+
+width: 75px;
+
+display: flex;
+
+flex-direction: row;
+
+list-style: none;
+
+padding: 25px 0;
+
+border-radius: 50px;
+
+border: 0.1px solid #999FFF;
+
+background-color: #181818;
+
+box-shadow: 4px 8px 0 #00FFFF, 0 6px 20px 0
+
+rgba(0, 0, 0, 0.19);
+
+}
+
+li {
+
+margin: auto;
+
+color: white;
+
+font-size: 20px;
+
+}
+
+
+
+li:after {
+
+display: block;
+
+}
+
+li:hover:after {
+
+transform: scaleX(1);
+}
+a{
+	color: skyblue;
+}

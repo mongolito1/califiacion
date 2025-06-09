@@ -1,0 +1,20 @@
+.contenedor-flex {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 50px;
+  gap: 20px;
+}
+
+.imagen-zodiaco {
+  width: 300px; /* ajusta el tamaño */
+  height: auto;
+  object-fit: cover;
+}
+
+.contenedor-texto {
+  flex: 1;
+}
+
+.interlineado {
+  line-height: 1.5;
+}

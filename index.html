@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Web</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilo_textos.css">
+</head>
+
+<body>
+  <header>
+    <h1>SIGNOS DEL ZODIACO</h1>
+    
+  </header>
+ <select id="rol" onchange="verificarRol()" onchange="window.location.href=this.value">
+        <option value="">Cuenta</option>
+        <option value="administrador">Administrador</option>
+        <option value="usuario">Usuario</option>
+        
+    </select>
+<div id="mensaje"></div>
+  <div id="passwordContainer" style="display:none;">
+        <p>Introduce la contraseña de administrador:</p>
+        <input type="password" id="adminPassword" autocomplete="new-password">
+        <button onclick="verificarPassword()">Entrar</button>
+    </div> 
+    <script>
+        function verificarRol() {
+            const rol = document.getElementById('rol').value;
+            const passwordContainer = document.getElementById('passwordContainer');
+
+            passwordContainer.style.display = 'none';
+            mensaje.innerHTML = "";
+
+            if (rol === 'administrador') {
+                passwordContainer.style.display = 'block';
+            } else if (rol === 'usuario') {
+                
+                window.location.href = 'includes/usuario.php';
+            } else {
+                passwordContainer.style.display = 'none';
+            }
+        }
+
+        function verificarPassword() {
+            const password = document.getElementById('adminPassword').value;
+            const contraseñaCorrecta = "admin123"; 
+
+            if (password === contraseñaCorrecta) {
+                window.location.href = 'includes/consulta.php';
+            } else {
+                alert("Contraseña incorrecta.");
+            }
+        }
+    </script>
+
+
+  <nav>
+    <ul>
+      <li><a href="#">1</a></li> 
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      
+<div class="contenedor-flex">
+  <div class="contenedor-texto">
+    <h2>¿Qué es el Zodíaco?</h2>
+    <p class="interlineado">
+      El zodíaco, o zodiaco, es una franja de la esfera celeste que se extiende, aproximadamente,<br>
+       unos 9 grados a ambos lados de la eclíptica y por la que se desplazan, anualmente, el Sol,<br>
+        la Luna y los planetas en su movimiento con respecto al fondo de estrellas. Como su nombre<br>
+        indica (del griego clásico zodiakos kyklos, ζῳδιακός κύκλος, «círculo de animales»), casi todas<br>
+         las constelaciones que la forman tienen nombre de animales. Originariamente constituíaun<br>
+          calendario de 12 meses creado por los babilonios alrededor del 2000 a.C. Estos dividieron el <br>
+          zodíaco en 12 partes iguales, bautizadas según las constelaciones que entonces contenían y <br>
+          que dan nombre a los conocidos signos zodiacales (Aries, Tauro etc...). Desde entonces la <br>
+          precesión de los equinoccios ha modificado esta franja de forma que ya no corresponden las <br>
+          mismas constelaciones a las mismas épocas del año (en primavera el Sol no pasa por Aries, <br>
+          sino por Piscis). Actualmente son más de 12 las constelaciones contenidas total o parcialmente<br>
+           en el zodíaco, ya que en 1930 la Unión Astronómica Internacional (IAU) estableció los límites de <br>
+           las constelaciones con zonas rectangulares, siguiendo la red de la declinación y la escensión recta,<br>
+            alargando la constelación de Ofiuco hasta cortar la eclíptica y haciendo que partes de otras <br>
+            (como la Ballena) también invadan la franja zodiacal.
+    </p>
+<br><br>
+    <h2>¿Para qué se usa el zodíaco?</h2>
+    <p class="interlineado">
+      El zodíaco se utiliza principalmente en la astrología, una disciplina que interpreta cómo<br> 
+      la posición de los astros en el momento del nacimiento influye en la personalidad y<br> 
+      destino de una persona. Según esta creencia, el signo bajo el que naces 
+      puede darte<br>  ciertas características.
+    </p>
+  </div>
+
+  <img src="img/WhatsApp Image 2025-06-01 at 8.55.01 PM.jpeg" alt="Imagen del zodíaco" class="imagen-zodiaco" style="border: 30px; height: 400px; width: 700px;">
+</div>
+
+    
+      <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+        
+  <video controls class="responsive" style="height: 500px; width: 700px;">
+   
+    <source src="assets/video/LOS GUERREROS DEL ZODIACO (EL LIENZO PERDIDO) [LATINO] OPENING.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+  
+</div>
+ <br>
+
+ <div style="display: flex; justify-content: center; align-items: center; height: 20vh;"></div>
+      <audio controls>
+        <source src="assets/audio/Moderatto-Zodiaco.MP3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+     </div>
+
+      <h3> ¿Qué signos existen????</h3>
+      <table>
+        <tr>
+          <th>Signo</th>
+          <th>Fecha</th>
+        </tr>
+        <tr>
+          <td>Aries</td>
+          <td>del 21 de marzo al 19 o 20 de abril</td>
+        </tr>
+        <tr>
+          <td>Tauro</td>
+          <td>del 20 o 21 de abril al 20 de mayo</td>
+        </tr>
+        <tr>
+          <td>Géminis</td>
+          <td>del 21 de mayo al 20 o 24 de junio</td>
+        </tr>
+        <tr>
+          <td>Cáncer</td>
+          <td>del 21 o 25 de junio al 22 de julio</td>
+        </tr>
+        <tr>
+          <td>Leo</td>
+          <td>del 23 de julio al 22 o 23 de agosto</td>
+        </tr>
+        <tr>
+          <td>Virgo</td>
+          <td>del 23 o 24 de agosto al 22 o 23 de septiembre</td>
+        </tr>
+        <tr>
+          <td>Libra</td>
+          <td>del 23 o 24 de septiembre al 22 o 23 de octubre</td>
+        </tr>
+        <tr>
+          <td>Escorpio</td>
+          <td>del 23 o 24 de octubre al 21 o 22 de noviembre</td>
+        </tr>
+        <tr>
+          <td>Sagitario</td>
+          <td>del 22 o 23 de noviembre al 21 o 22 de diciembre</td>
+        </tr>
+        <tr>
+          <td>Capricornio</td>
+          <td>del 22 o 23 de diciembre al 19 o 20 de enero</td>
+        </tr>
+        <tr>
+          <td>Acuario</td>
+          <td> del 20 o 21 de enero al 18 o 19 de febrero</td>
+        </tr>
+        <tr>
+          <td>Piscis</td>
+          <td>del 19 o 20 de febrero al 20 o 21 de marzo</td>
+        </tr>
+      </table>
+
+      
+
+      
+  <nav>
+    <ul>
+      <li><a href="includes/formulario.php">Formulario</a></li> 
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">PDF</a></li>
+    </ul>
+  </nav>
+
+
+    
+
+    <aside>
+      <h3>Noticias</h3>
+      <p>Últimas novedades del sitio web.</p>
+      <i class="fas fa-camera"></i> Cámara<br>
+      <i class="fas fa-envelope"></i> Correo<br>
+    </aside>
+  </main>
+ 
+<!--separacion-->
+  <footer>
+    © JADY Foundation
+  </footer>
+
+  
+  
+
+</body>
+
+</html>
